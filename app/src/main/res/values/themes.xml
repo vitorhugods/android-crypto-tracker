@@ -1,0 +1,31 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="Template.Base" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Original AppCompat attributes. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="android:statusBarColor">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorSecondary</item>
+        <item name="android:colorBackground">@color/colorBackground</item>
+        <item name="colorError">@color/colorError</item>
+
+        <!-- MaterialComponents attributes. -->
+        <item name="colorSecondary">@color/colorSecondary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryDark</item>
+        <item name="colorSecondaryVariant">@color/colorSecondaryVariant</item>
+        <item name="colorSurface">@color/colorSurface</item>
+        <item name="colorOnPrimary">@color/colorOnPrimary</item>
+        <item name="colorControlNormal">@color/colorOnPrimary</item>
+        <item name="colorOnSecondary">@color/colorOnSecondary</item>
+        <item name="colorOnBackground">@color/colorOnBackground</item>
+        <item name="colorOnError">@color/colorOnError</item>
+        <item name="colorOnSurface">@color/colorOnSurface</item>
+        <item name="scrimBackground">@color/colorScrim</item>
+        <item name="colorBackgroundFloating">@color/colorSurface</item>
+        <item name="android:textColorPrimary">@color/contrast4</item>
+    </style>
+
+    <style name="Theme.Template" parent="Template.Base" />
+
+</resources>
