@@ -28,8 +28,8 @@ android {
             )
         }
     }
-    dataBinding {
-        isEnabled = true
+    buildFeatures {
+        dataBinding = true
     }
     lintOptions {
         isWarningsAsErrors = true
@@ -51,8 +51,8 @@ repositories {
 dependencies {
     implementation(kotlin("stdlib-jdk8"))
 
-    implementation(project(Modules.Android.IMAGE_DISPLAY))
-    implementation(project(Modules.JVM.LOCALE))
+    implementation(project(Modules.Android.BASE))
+    implementation(project(Modules.Android.TICKER))
 
     implementation(LibSupport.ANDROIDX_APPCOMPAT)
     implementation(LibSupport.ANDROIDX_CONSTRAINT_LAYOUT)

@@ -20,6 +20,5 @@ pluginManagement {
 rootProject.name = ("Template")
 
 include(
-    "app", "image-display"
-    , "locale"
+    "app", "base", "ticker"
 )
