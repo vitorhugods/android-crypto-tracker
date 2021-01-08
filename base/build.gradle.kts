@@ -58,6 +58,7 @@ dependencies {
     implementation(LibDI.KOIN_FRAGMENT)
     implementation(LibDI.KOIN_VIEW_MODEL)
 
+    implementation(LibUI.MATERIAL_COMPONENTS)
     implementation(LibUI.RECYCLERVIEW)
 
     testImplementation(LibTesting.JUNIT)

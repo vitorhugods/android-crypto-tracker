@@ -45,7 +45,6 @@ android {
 
 repositories {
     maven("https://jitpack.io")
-    maven("https://dl.bintray.com/vitorhugods/AvatarView")
 }
 
 dependencies {

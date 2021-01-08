@@ -12,7 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:name="xyz.schwaab.crypto.app.CryptoApplication"
-        android:theme="@style/Theme.Template"
+        android:theme="@style/Theme.Crypto"
         tools:ignore="AllowBackup">
         <activity android:name="xyz.schwaab.crypto.app.presentation.MainActivity">
             <intent-filter>
