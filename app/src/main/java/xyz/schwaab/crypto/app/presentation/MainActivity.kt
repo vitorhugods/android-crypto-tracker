@@ -23,6 +23,7 @@ class MainActivity : BaseActivity() {
                 .replace<CurrencyTickerFragment>(R.id.container)
                 .commitNow()
         }
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
         viewModel.mainTitle.observe(this, { title ->
             supportActionBar?.title = title
         })
