@@ -61,6 +61,8 @@ dependencies {
     api(LibUI.MATERIAL_COMPONENTS)
     api(LibUI.RECYCLERVIEW)
 
+    api(LibReactive.RX_KOTLIN)
+
     testImplementation(LibTesting.JUNIT)
 
     androidTestImplementation(LibAndroidTesting.ANDROIDX_TEST_RUNNER)

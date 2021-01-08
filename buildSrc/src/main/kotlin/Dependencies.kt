@@ -1,4 +1,3 @@
-
 object Sdk {
     const val MIN_SDK_VERSION = 21
     const val TARGET_SDK_VERSION = 30
@@ -32,6 +31,7 @@ object Versions {
     const val RETROFIT = "2.9.0"
     const val RETROFIT_KOTLINX_SERIALIZATION = "0.8.0"
     const val ROBOLECTRIC = "4.4"
+    const val RX_KOTLIN = "3.0.1"
 }
 
 object BuildPluginsVersion {
@@ -66,8 +66,12 @@ object LibHttp {
     const val OKHTTP_LOGGING = "com.squareup.okhttp3:logging-interceptor:${Versions.OKHTTP}"
 }
 
-object LibPlot{
+object LibPlot {
     const val MPANDROID_CHART = "com.github.PhilJay:MPAndroidChart:${Versions.MPANDROID_CHART}"
+}
+
+object LibReactive {
+    const val RX_KOTLIN = "io.reactivex.rxjava3:rxkotlin:${Versions.RX_KOTLIN}"
 }
 
 object LibSerialization {
@@ -96,7 +100,8 @@ object LibTesting {
 object LibUI {
     const val AVATAR_VIEW = "xyz.schwaab:avvylib:${Versions.AVATAR_VIEW}"
     const val FLEXBOX_LAYOUT = "com.google.android:flexbox:${Versions.FLEXBOX_LAYOUT}"
-    const val MATERIAL_COMPONENTS = "com.google.android.material:material:${Versions.MATERIAL_COMPONENTS}"
+    const val MATERIAL_COMPONENTS =
+        "com.google.android.material:material:${Versions.MATERIAL_COMPONENTS}"
     const val PICASSO = "com.squareup.picasso:picasso:${Versions.PICASSO}"
     const val RECYCLERVIEW = "androidx.recyclerview:recyclerview:${Versions.RECYCLERVIEW}"
 }
