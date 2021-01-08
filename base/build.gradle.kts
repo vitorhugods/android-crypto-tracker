@@ -48,18 +48,18 @@ android {
 dependencies {
     implementation(kotlin("stdlib-jdk8"))
 
-    implementation(LibArchitecture.LIVE_DATA)
-    implementation(LibArchitecture.VIEW_MODEL)
+    api(LibArchitecture.LIVE_DATA)
+    api(LibArchitecture.VIEW_MODEL)
 
-    implementation(LibSupport.ANDROIDX_APPCOMPAT)
-    implementation(LibSupport.ANDROIDX_CORE_KTX)
+    api(LibSupport.ANDROIDX_APPCOMPAT)
+    api(LibSupport.ANDROIDX_CORE_KTX)
 
-    implementation(LibDI.KOIN)
-    implementation(LibDI.KOIN_FRAGMENT)
-    implementation(LibDI.KOIN_VIEW_MODEL)
+    api(LibDI.KOIN)
+    api(LibDI.KOIN_FRAGMENT)
+    api(LibDI.KOIN_VIEW_MODEL)
 
-    implementation(LibUI.MATERIAL_COMPONENTS)
-    implementation(LibUI.RECYCLERVIEW)
+    api(LibUI.MATERIAL_COMPONENTS)
+    api(LibUI.RECYCLERVIEW)
 
     testImplementation(LibTesting.JUNIT)
 
