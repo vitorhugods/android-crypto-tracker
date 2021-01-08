@@ -14,8 +14,6 @@ dependencies {
     implementation(LibSerialization.RETROFIT_KOTLINX)
     implementation(LibHttp.RETROFIT)
     implementation(LibHttp.OKHTTP)
-    implementation(LibCoroutines.CORE)
-    implementation(LibCoroutines.ANDROID)
 
     testImplementation(LibTesting.JUNIT)
 }

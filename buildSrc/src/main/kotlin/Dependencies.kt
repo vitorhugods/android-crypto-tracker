@@ -13,7 +13,6 @@ object Versions {
     const val AVATAR_VIEW = "1.1.0"
     const val CONSTRAINT_LAYOUT = "2.0.4"
     const val CORE_KTX = "1.3.2"
-    const val COROUTINES = "1.4.1"
     const val ESPRESSO_CORE = "3.2.0"
     const val FLEXBOX_LAYOUT = "2.0.1"
     const val FRAGMENT = "1.2.5"
@@ -47,11 +46,6 @@ object LibArchitecture {
     const val LIVE_DATA = "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.ANDROID_LIFECYCLE}"
     const val VIEW_MODEL =
         "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.ANDROID_LIFECYCLE}"
-}
-
-object LibCoroutines {
-    const val CORE = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.COROUTINES}"
-    const val ANDROID = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.COROUTINES}"
 }
 
 object LibDI {
@@ -90,7 +84,6 @@ object LibSupport {
 
 object LibTesting {
     const val ANDROID_CORE_TESTING = "androidx.arch.core:core-testing:${Versions.ANDROID_ARCH}"
-    const val COROUTINES = "org.jetbrains.kotlinx:kotlinx-coroutines-test:${Versions.COROUTINES}"
     const val JUNIT = "junit:junit:${Versions.JUNIT}"
     const val KLUENT = "org.amshove.kluent:kluent-android:${Versions.KLUENT}"
     const val LIVE_DATA_TESTING = "com.jraska.livedata:testing-ktx:${Versions.LIVE_DATA_TESTING}"

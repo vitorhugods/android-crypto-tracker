@@ -20,5 +20,5 @@ pluginManagement {
 rootProject.name = ("Crypto")
 
 include(
-    "app", "base", "ticker"
+    "app", "base", "blockchain-api-client", "ticker"
 )

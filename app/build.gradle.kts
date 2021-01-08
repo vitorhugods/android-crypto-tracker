@@ -60,9 +60,6 @@ dependencies {
     implementation(LibArchitecture.LIVE_DATA)
     implementation(LibArchitecture.VIEW_MODEL)
 
-    implementation(LibCoroutines.CORE)
-    implementation(LibCoroutines.ANDROID)
-
     implementation(LibDI.KOIN)
     implementation(LibDI.KOIN_VIEW_MODEL)
     implementation(LibDI.KOIN_FRAGMENT)
@@ -77,7 +74,6 @@ dependencies {
     implementation(LibUI.RECYCLERVIEW)
 
     testImplementation(LibTesting.ANDROID_CORE_TESTING)
-    testImplementation(LibTesting.COROUTINES)
     testImplementation(LibTesting.JUNIT)
     testImplementation(LibTesting.KLUENT)
     testImplementation(LibTesting.ROBOLECTRIC)
