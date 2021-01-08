@@ -25,6 +25,7 @@ object Versions {
     const val KTLINT = "0.39.0"
     const val LIVE_DATA_TESTING = "1.1.2"
     const val MATERIAL_COMPONENTS = "1.2.1"
+    const val MPANDROID_CHART = "v3.1.0"
     const val OKHTTP = "4.9.0"
     const val PICASSO = "2.71828"
     const val RECYCLERVIEW = "1.1.0"
@@ -63,6 +64,10 @@ object LibHttp {
     const val RETROFIT = "com.squareup.retrofit2:retrofit:${Versions.RETROFIT}"
     const val OKHTTP = "com.squareup.okhttp3:okhttp:${Versions.OKHTTP}"
     const val OKHTTP_LOGGING = "com.squareup.okhttp3:logging-interceptor:${Versions.OKHTTP}"
+}
+
+object LibPlot{
+    const val MPANDROID_CHART = "com.github.PhilJay:MPAndroidChart:${Versions.MPANDROID_CHART}"
 }
 
 object LibSerialization {

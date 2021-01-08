@@ -45,6 +45,10 @@ android {
     }
 }
 
+repositories {
+    maven("https://jitpack.io")
+}
+
 dependencies {
     implementation(kotlin("stdlib-jdk8"))
 
@@ -57,8 +61,11 @@ dependencies {
     implementation(LibArchitecture.LIVE_DATA)
     implementation(LibArchitecture.VIEW_MODEL)
 
+    implementation(LibPlot.MPANDROID_CHART)
+
     implementation(LibSupport.ANDROIDX_APPCOMPAT)
     implementation(LibSupport.ANDROIDX_CORE_KTX)
+    implementation(LibUI.FLEXBOX_LAYOUT)
 
     testImplementation(LibTesting.JUNIT)
 
