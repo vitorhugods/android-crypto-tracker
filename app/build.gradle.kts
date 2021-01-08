@@ -13,7 +13,7 @@ android {
         applicationId = AppCoordinates.APP_ID
         versionCode = AppCoordinates.APP_VERSION_CODE
         versionName = AppCoordinates.APP_VERSION_NAME
-        testInstrumentationRunner = "xyz.schwaab.template.TestAppJUnitRunner"
+        testInstrumentationRunner = "xyz.schwaab.crypto.app.TestAppJUnitRunner"
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8

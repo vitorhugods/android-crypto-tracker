@@ -17,7 +17,7 @@ pluginManagement {
     }
 }
 
-rootProject.name = ("Template")
+rootProject.name = ("Crypto")
 
 include(
     "app", "base", "ticker"

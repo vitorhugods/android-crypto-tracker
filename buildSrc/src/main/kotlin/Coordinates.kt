@@ -1,4 +1,4 @@
-const val PUBLISHING_GROUP = "xyz.schwaab.template"
+const val PUBLISHING_GROUP = "xyz.schwaab.crypto"
 
 object AppCoordinates {
     const val APP_ID = "xyz.schwaab.app"

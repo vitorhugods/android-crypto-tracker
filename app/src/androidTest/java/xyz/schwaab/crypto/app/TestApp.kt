@@ -1,4 +1,4 @@
-package xyz.schwaab.crypto
+package xyz.schwaab.crypto.app
 
 import android.app.Application
 import android.content.Context

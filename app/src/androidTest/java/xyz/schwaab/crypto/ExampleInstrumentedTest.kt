@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("xyz.schwaab.template", appContext.packageName)
+        assertEquals("xyz.schwaab.crypto", appContext.packageName)
     }
 }
