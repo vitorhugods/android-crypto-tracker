@@ -1,4 +1,4 @@
-package xyz.schwaab.crypto.base
+package xyz.schwaab.crypto.base.presentation
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView

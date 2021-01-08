@@ -4,7 +4,7 @@ import android.os.Bundle
 import org.koin.android.ext.android.inject
 import org.koin.androidx.fragment.android.replace
 import xyz.schwaab.crypto.R
-import xyz.schwaab.crypto.base.BaseActivity
+import xyz.schwaab.crypto.base.presentation.BaseActivity
 import xyz.schwaab.crypto.databinding.MainActivityBinding
 import xyz.schwaab.crypto.ticker.presentation.CurrencyTickerFragment
 

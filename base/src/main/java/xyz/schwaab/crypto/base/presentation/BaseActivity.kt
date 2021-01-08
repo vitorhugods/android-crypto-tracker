@@ -1,4 +1,4 @@
-package xyz.schwaab.crypto.base
+package xyz.schwaab.crypto.base.presentation
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

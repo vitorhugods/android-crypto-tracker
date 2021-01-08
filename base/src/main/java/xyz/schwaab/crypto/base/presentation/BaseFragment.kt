@@ -1,4 +1,4 @@
-package xyz.schwaab.crypto.base
+package xyz.schwaab.crypto.base.presentation
 
 import androidx.fragment.app.Fragment
 
