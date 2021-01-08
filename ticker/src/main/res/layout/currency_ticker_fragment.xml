@@ -9,47 +9,62 @@
         android:padding="12dp"
         app:dividerDrawable="@drawable/divider_medium"
         app:flexDirection="column"
+        android:clipToPadding="false"
         app:showDivider="middle">
 
-        <TextView
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/label_current_value"
-            android:textAppearance="@style/TextAppearance.Crypto.Subtitle1" />
+            android:layout_height="wrap_content">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/colorPrimary"
-            android:textAppearance="@style/TextAppearance.Crypto.Headline6"
-            tools:text="$24,923.02" />
+            <com.google.android.flexbox.FlexboxLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="12dp"
+                app:dividerDrawable="@drawable/divider_medium"
+                app:flexDirection="column"
+                app:showDivider="middle">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_current_value"
+                    android:textAppearance="@style/TextAppearance.Crypto.Subtitle1" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextAppearance.Crypto.Headline6"
+                    android:textColor="@color/colorPrimary"
+                    tools:text="$24,923.02" />
+            </com.google.android.flexbox.FlexboxLayout>
+        </com.google.android.material.card.MaterialCardView>
 
         <com.google.android.material.button.MaterialButtonToggleGroup
-            android:layout_width="match_parent"
             android:id="@+id/toggleGroupPeriodSelection"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:singleSelection="true"
-            app:checkedButton="@id/buttonPeriodWeek">
+            app:checkedButton="@id/buttonPeriodWeek"
+            app:singleSelection="true">
 
             <com.google.android.material.button.MaterialButton
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                 android:id="@+id/buttonPeriodWeek"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/period_one_week" />
 
             <com.google.android.material.button.MaterialButton
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                 android:id="@+id/buttonPeriodMonth"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/period_one_month" />
 
             <com.google.android.material.button.MaterialButton
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                 android:id="@+id/buttonPeriodYear"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"

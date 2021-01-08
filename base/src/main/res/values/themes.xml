@@ -37,6 +37,12 @@
         <item name="textAppearanceHeadline4">@style/TextAppearance.Crypto.Headline4</item>
         <item name="textAppearanceHeadline5">@style/TextAppearance.Crypto.Headline5</item>
         <item name="textAppearanceHeadline6">@style/TextAppearance.Crypto.Headline6</item>
+
+
+        <!-- Shape -->
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.Crypto.SmallComponent</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.Crypto.MediumComponent</item>
+        <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.Crypto.LargeComponent</item>
     </style>
 
     <style name="Theme.Crypto" parent="Base.Crypto" />
