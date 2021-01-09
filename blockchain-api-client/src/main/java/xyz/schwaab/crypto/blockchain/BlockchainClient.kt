@@ -16,7 +16,7 @@ interface BlockchainClient {
     companion object {
         private const val BASE_URL = "https://api.blockchain.info/"
 
-        fun create(okHttpClient: OkHttpClient): HttpBlockchainClient {
+        fun create(okHttpClient: OkHttpClient): BlockchainClient {
 
             val retrofit = Retrofit.Builder()
                 .baseUrl(BASE_URL)

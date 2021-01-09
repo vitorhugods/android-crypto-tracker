@@ -6,12 +6,8 @@ import xyz.schwaab.crypto.ticker.data.ChartData
 import xyz.schwaab.crypto.ticker.data.ChartType
 import xyz.schwaab.crypto.ticker.data.CurrencyRepository
 
-class RequestChartData(private val currencyRepository: CurrencyRepository) :
+interface RequestChartData :
     RequestInteractor<RequestChartData.Parameters, RequestChartData.Result> {
-
-    override fun invoke(params: Parameters): Single<Result> {
-        return currencyRepository.getChartData(params)
-    }
 
     data class Parameters(
         val chartType: ChartType,
@@ -25,5 +21,13 @@ class RequestChartData(private val currencyRepository: CurrencyRepository) :
             object ServiceUnavailable : Failure()
             class UnknownError(val throwable: Throwable) : Failure()
         }
+    }
+}
+
+internal class RequestChartDataImpl(private val currencyRepository: CurrencyRepository) :
+    RequestChartData {
+
+    override fun invoke(params: RequestChartData.Parameters): Single<RequestChartData.Result> {
+        return currencyRepository.getChartData(params)
     }
 }

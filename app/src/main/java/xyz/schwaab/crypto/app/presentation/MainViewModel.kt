@@ -5,6 +5,6 @@ import androidx.lifecycle.MutableLiveData
 import xyz.schwaab.crypto.base.presentation.BaseViewModel
 
 open class MainViewModel : BaseViewModel() {
-    private val _mainTitle = MutableLiveData("Title")
+    private val _mainTitle = MutableLiveData("Bitcoin Price")
     val mainTitle: LiveData<String> = _mainTitle
 }

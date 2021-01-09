@@ -15,7 +15,7 @@ class RequestChartDataTest {
     @Before
     fun setup() {
         mockRepository = mock()
-        subject = RequestChartData(mockRepository)
+        subject = RequestChartDataImpl(mockRepository)
     }
 
     @Test
