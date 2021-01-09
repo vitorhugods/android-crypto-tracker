@@ -3,15 +3,15 @@ package xyz.schwaab.crypto.base.presentation
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 
-abstract class BaseRecyclerAdapter<DATA : Any, VH : BaseViewHolder<*, DATA>> :
+abstract class BaseRecyclerAdapter<Data : Any, VH : BaseViewHolder<*, Data>> :
     RecyclerView.Adapter<VH>() {
-    private val onItemClickListeners = mutableListOf<OnItemClickListener<DATA>>()
+    private val onItemClickListeners = mutableListOf<OnItemClickListener<Data>>()
 
-    fun onItemClick(onItemClick: OnItemClickListener<DATA>) {
+    fun onItemClick(onItemClick: OnItemClickListener<Data>) {
         onItemClickListeners += onItemClick
     }
 
-    var data: List<DATA> = listOf()
+    var data: List<Data> = listOf()
         set(value) {
             field = value
             notifyDataSetChanged()
@@ -29,7 +29,7 @@ abstract class BaseRecyclerAdapter<DATA : Any, VH : BaseViewHolder<*, DATA>> :
         }
     }
 
-    fun interface OnItemClickListener<DATA> {
-        fun onItemClick(item: DATA, position: Int, view: View)
+    fun interface OnItemClickListener<Data> {
+        fun onItemClick(item: Data, position: Int, view: View)
     }
 }
