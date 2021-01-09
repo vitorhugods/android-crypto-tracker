@@ -1,4 +1,4 @@
-package xyz.schwaab.crypto.base
+package xyz.schwaab.crypto.presentation
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import org.junit.Rule

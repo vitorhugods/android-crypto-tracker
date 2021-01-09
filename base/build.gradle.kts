@@ -22,6 +22,7 @@ android {
     }
 
     compileOptions {
+        isCoreLibraryDesugaringEnabled = true
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
@@ -48,6 +49,8 @@ android {
 dependencies {
     implementation(kotlin("stdlib-jdk8"))
 
+    coreLibraryDesugaring(LibDesugar.CORE_DESUGAR)
+
     api(LibArchitecture.LIVE_DATA)
     api(LibArchitecture.VIEW_MODEL)
 
@@ -58,12 +61,18 @@ dependencies {
     api(LibDI.KOIN_FRAGMENT)
     api(LibDI.KOIN_VIEW_MODEL)
 
+    api(LibHttp.OKHTTP)
+    api(LibHttp.OKHTTP_LOGGING)
+
     api(LibUI.MATERIAL_COMPONENTS)
     api(LibUI.RECYCLERVIEW)
 
     api(LibReactive.RX_KOTLIN)
 
     testImplementation(LibTesting.JUNIT)
+    testImplementation(LibTesting.ANDROID_CORE_TESTING)
+    testImplementation(LibTesting.KLUENT)
+    testImplementation(LibTesting.LIVE_DATA_TESTING)
 
     androidTestImplementation(LibAndroidTesting.ANDROIDX_TEST_RUNNER)
     androidTestImplementation(LibAndroidTesting.ANDROIDX_TEST_EXT_JUNIT)

@@ -16,6 +16,7 @@ android {
         testInstrumentationRunner = "xyz.schwaab.crypto.app.TestAppJUnitRunner"
     }
     compileOptions {
+        isCoreLibraryDesugaringEnabled = true
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
@@ -49,6 +50,8 @@ repositories {
 
 dependencies {
     implementation(kotlin("stdlib-jdk8"))
+
+    coreLibraryDesugaring(LibDesugar.CORE_DESUGAR)
 
     implementation(project(Modules.Android.BASE))
     implementation(project(Modules.Android.TICKER))

@@ -1,14 +1,11 @@
 package xyz.schwaab.crypto.blockchain.util
 
-import java.util.*
+import java.time.LocalDate
+
 
 /**
- * Creates a [Date] using human readable integers for [year], [month] and [day]
+ * Creates a [LocalDate] using human readable integers for [year], [month] and [day]
  */
-fun createDate(year: Int, month: Int, day: Int): Date {
-    val calendar = Calendar.getInstance()
-    calendar.set(Calendar.YEAR, year)
-    calendar.set(Calendar.MONTH, month - 1)
-    calendar.set(Calendar.DAY_OF_MONTH, day)
-    return Date.from(calendar.toInstant())
+fun createDate(year: Int, month: Int, day: Int): LocalDate {
+    return LocalDate.of(year, month, day)
 }

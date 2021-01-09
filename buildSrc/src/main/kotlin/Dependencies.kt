@@ -12,6 +12,7 @@ object Versions {
     const val APPCOMPAT = "1.2.0"
     const val AVATAR_VIEW = "1.1.0"
     const val CONSTRAINT_LAYOUT = "2.0.4"
+    const val CORE_DESUGAR = "1.0.9"
     const val CORE_KTX = "1.3.2"
     const val ESPRESSO_CORE = "3.2.0"
     const val FLEXBOX_LAYOUT = "2.0.1"
@@ -48,6 +49,10 @@ object LibArchitecture {
     const val LIVE_DATA = "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.ANDROID_LIFECYCLE}"
     const val VIEW_MODEL =
         "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.ANDROID_LIFECYCLE}"
+}
+
+object LibDesugar{
+    const val CORE_DESUGAR = "com.android.tools:desugar_jdk_libs:${Versions.CORE_DESUGAR}"
 }
 
 object LibDI {

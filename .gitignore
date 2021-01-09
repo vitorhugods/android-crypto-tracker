@@ -52,8 +52,7 @@ fabric.properties
 *.class
 bin/
 gen/
-out/
-release/
+./release/
 .gradle/
 build/
 local.properties

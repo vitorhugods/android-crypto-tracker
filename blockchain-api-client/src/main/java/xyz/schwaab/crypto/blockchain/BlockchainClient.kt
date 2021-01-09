@@ -8,15 +8,15 @@ import okhttp3.OkHttpClient
 import retrofit2.Converter
 import retrofit2.Retrofit
 import xyz.schwaab.crypto.blockchain.request.GetChartData
+import xyz.schwaab.crypto.blockchain.request.GetChartDataImpl
 
-class BlockchainClient internal constructor(blockchainInterface: BlockchainInterface) {
-
-    val getChartData = GetChartData(blockchainInterface)
+interface BlockchainClient {
+    val getChartData: GetChartData
 
     companion object {
         private const val BASE_URL = "https://api.blockchain.info/"
 
-        fun create(okHttpClient: OkHttpClient): BlockchainClient {
+        fun create(okHttpClient: OkHttpClient): HttpBlockchainClient {
 
             val retrofit = Retrofit.Builder()
                 .baseUrl(BASE_URL)
@@ -27,7 +27,7 @@ class BlockchainClient internal constructor(blockchainInterface: BlockchainInter
 
             val blockchainInterface = retrofit.create(BlockchainInterface::class.java)
 
-            return BlockchainClient(blockchainInterface)
+            return HttpBlockchainClient(blockchainInterface)
         }
 
         private fun createJsonAdapter(): Converter.Factory {
@@ -41,4 +41,10 @@ class BlockchainClient internal constructor(blockchainInterface: BlockchainInter
             return jsonConfiguration.asConverterFactory(mediaType)
         }
     }
+}
+
+class HttpBlockchainClient internal constructor(blockchainInterface: BlockchainInterface) :
+    BlockchainClient {
+
+    override val getChartData: GetChartData = GetChartDataImpl(blockchainInterface)
 }

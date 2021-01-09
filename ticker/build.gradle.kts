@@ -22,6 +22,7 @@ android {
     }
 
     compileOptions {
+        isCoreLibraryDesugaringEnabled = true
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
@@ -52,6 +53,8 @@ repositories {
 dependencies {
     implementation(kotlin("stdlib-jdk8"))
 
+    coreLibraryDesugaring(LibDesugar.CORE_DESUGAR)
+
     implementation(project(Modules.Android.BASE))
     implementation(project(Modules.JVM.BLOCKCHAIN_CLIENT))
 
@@ -69,6 +72,9 @@ dependencies {
     implementation(LibUI.FLEXBOX_LAYOUT)
 
     testImplementation(LibTesting.JUNIT)
+    testImplementation(LibTesting.ANDROID_CORE_TESTING)
+    testImplementation(LibTesting.KLUENT)
+    testImplementation(LibTesting.LIVE_DATA_TESTING)
 
     androidTestImplementation(LibAndroidTesting.ANDROIDX_TEST_RUNNER)
     androidTestImplementation(LibAndroidTesting.ANDROIDX_TEST_EXT_JUNIT)

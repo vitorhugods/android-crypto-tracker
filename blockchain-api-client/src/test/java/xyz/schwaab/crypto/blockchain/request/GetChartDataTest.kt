@@ -12,6 +12,7 @@ import xyz.schwaab.crypto.blockchain.model.ChartDataDTO
 import xyz.schwaab.crypto.blockchain.model.ChartTypeDTO
 import xyz.schwaab.crypto.blockchain.util.createDate
 import java.net.SocketTimeoutException
+import java.time.LocalDate
 import java.util.*
 
 class GetChartDataTest {
@@ -22,7 +23,7 @@ class GetChartDataTest {
     @Before
     fun setUp() {
         mockInterface = mock(BlockchainInterface::class)
-        subject = GetChartData(mockInterface)
+        subject = GetChartDataImpl(mockInterface)
     }
 
     @Test
@@ -76,6 +77,19 @@ class GetChartDataTest {
     }
 
     @Test
+    fun serviceUnavailableWhenResponseStatusCodeIs400() {
+        When calling mockInterface.getChartData(any(), any()) itReturns Observable.just(
+            Response.error(400, "".toResponseBody())
+        )
+
+        subject.invoke(createParameters())
+            .test()
+            .assertValue {
+                it is GetChartData.Result.Failure.BadRequest
+            }
+    }
+
+    @Test
     fun serviceUnavailableWhenFailingToDeserializeResponse() {
         When calling mockInterface.getChartData(any(), any()) itReturns Observable.error(
             SerializationException()
@@ -119,7 +133,7 @@ class GetChartDataTest {
 
     private fun createParameters() =
         GetChartData.Parameters(
-            Date(),
+            LocalDate.of(2020,10,1),
             ChartTypeDTO.TRANSACTIONS_PER_SECOND
         )
 }
