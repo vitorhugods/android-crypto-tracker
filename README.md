@@ -2,6 +2,8 @@
 
 A simple way of getting price information on crypto-currencies
 
+<img  src="/pics/sample.png" alt="Sample" style="max-width:60%;">
+
 #### Currently supported currencies
 - Bitcoin
 
