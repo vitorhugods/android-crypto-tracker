@@ -55,9 +55,9 @@ internal class GetChartDataImpl(private val blockchainInterface: BlockchainInter
         }
 
     private fun handleResponse(it: Response<ChartDataDTO>): GetChartData.Result =
-        if (it.isSuccessful) {
-            GetChartData.Result.Success(it.body()!!)
-        } else {
-            GetChartData.Result.Failure.ServiceUnavailable
+        when {
+            it.isSuccessful -> GetChartData.Result.Success(it.body()!!)
+            it.code() == 400 -> GetChartData.Result.Failure.BadRequest
+            else -> GetChartData.Result.Failure.ServiceUnavailable
         }
 }

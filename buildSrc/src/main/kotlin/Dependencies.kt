@@ -22,7 +22,6 @@ object Versions {
     const val KOIN = "2.2.1"
     const val KOTLINX_SERIALIZATION = "1.0.1"
     const val KLUENT = "1.64"
-    const val KTLINT = "0.39.0"
     const val LIVE_DATA_TESTING = "1.1.2"
     const val MATERIAL_COMPONENTS = "1.2.1"
     const val MPANDROID_CHART = "v3.1.0"
@@ -38,9 +37,7 @@ object Versions {
 
 object BuildPluginsVersion {
     const val AGP = "4.1.1"
-    const val DETEKT = "1.14.2"
     const val KOTLIN = "1.4.10"
-    const val KTLINT = "9.4.1"
     const val VERSIONS_PLUGIN = "0.36.0"
 }
 

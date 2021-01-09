@@ -15,10 +15,10 @@ jobs:
       with:
         java-version: 1.8
 
-    - name: Build
+    - name: Assemble
       run: |
-       ./gradlew build
+       ./gradlew assemble
         -
-    - name: Test
+    - name: Check
       run: |
-       ./gradlew test
+       ./gradlew check

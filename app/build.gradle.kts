@@ -33,7 +33,7 @@ android {
         dataBinding = true
     }
     lintOptions {
-        isWarningsAsErrors = true
+        isWarningsAsErrors = false
         isAbortOnError = true
     }
     testOptions {
