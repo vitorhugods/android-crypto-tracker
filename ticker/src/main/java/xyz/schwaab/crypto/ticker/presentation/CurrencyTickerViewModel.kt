@@ -25,7 +25,6 @@ class CurrencyTickerViewModel(
 
     private val compositeDisposable = CompositeDisposable()
 
-
     fun onChartPeriodSelectionChanged(chartPeriod: ChartPeriod) {
         _selectedChartPeriod.postValue(chartPeriod)
         updateChartData(chartPeriod)
@@ -54,6 +53,11 @@ class CurrencyTickerViewModel(
             }
         }
         compositeDisposable.add(disposable)
+    }
+
+    override fun onCleared() {
+        super.onCleared()
+        compositeDisposable.dispose()
     }
 
     enum class ChartPeriod(val amountOfDays: Int) {

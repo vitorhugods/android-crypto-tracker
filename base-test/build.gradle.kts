@@ -46,36 +46,27 @@ android {
     }
 }
 
-repositories {
-    maven("https://jitpack.io")
-}
-
 dependencies {
     implementation(kotlin("stdlib-jdk8"))
 
     coreLibraryDesugaring(LibDesugar.CORE_DESUGAR)
 
-    implementation(project(Modules.Android.BASE))
-    implementation(project(Modules.JVM.BLOCKCHAIN_CLIENT))
+    implementation(LibArchitecture.LIVE_DATA)
+    implementation(LibArchitecture.VIEW_MODEL)
+
+    implementation(LibSupport.ANDROIDX_APPCOMPAT)
+    implementation(LibSupport.ANDROIDX_CORE_KTX)
 
     implementation(LibDI.KOIN)
     implementation(LibDI.KOIN_FRAGMENT)
     implementation(LibDI.KOIN_VIEW_MODEL)
 
-    implementation(LibArchitecture.LIVE_DATA)
-    implementation(LibArchitecture.VIEW_MODEL)
+    implementation(LibReactive.RX_KOTLIN)
 
-    implementation(LibPlot.MPANDROID_CHART)
-
-    implementation(LibSupport.ANDROIDX_APPCOMPAT)
-    implementation(LibSupport.ANDROIDX_CORE_KTX)
-    implementation(LibUI.FLEXBOX_LAYOUT)
-
-    testImplementation(project(Modules.Android.BASE_TEST))
-    testImplementation(LibTesting.JUNIT)
-    testImplementation(LibTesting.ANDROID_CORE_TESTING)
-    testImplementation(LibTesting.KLUENT)
-    testImplementation(LibTesting.LIVE_DATA_TESTING)
+    implementation(LibTesting.JUNIT)
+    implementation(LibTesting.ANDROID_CORE_TESTING)
+    implementation(LibTesting.KLUENT)
+    implementation(LibTesting.LIVE_DATA_TESTING)
 
     androidTestImplementation(LibAndroidTesting.ANDROIDX_TEST_RUNNER)
     androidTestImplementation(LibAndroidTesting.ANDROIDX_TEST_EXT_JUNIT)
