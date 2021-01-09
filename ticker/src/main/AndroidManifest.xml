@@ -1,1 +1,5 @@
-<manifest package="xyz.schwaab.template.ticker" />
+<manifest package="xyz.schwaab.crypto.ticker"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <application
+        android:theme="@style/Theme.Crypto"/>
+</manifest>

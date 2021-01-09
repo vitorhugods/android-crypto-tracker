@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="label_current_value">Current Value</string>
+    <string name="period_one_week">Week</string>
+    <string name="period_one_month">Month</string>
+    <string name="period_one_year">Year</string>
+    <string name="error_service_unavailable">Service is currently unvavailable</string>
+    <string name="error_connection_problems">Connection error</string>
+    <string name="label_price_of_btc">Price of BTC</string>
+</resources>

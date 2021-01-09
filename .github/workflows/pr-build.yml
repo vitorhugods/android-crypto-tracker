@@ -15,12 +15,6 @@ jobs:
       with:
         java-version: 1.8
 
-    - name: Build
+    - name: Build & Test
       run: |
        ./gradlew build
-        -
-    - name: Test
-      run: |
-       ./gradlew test
-
-    #### TODO: Add Detekt

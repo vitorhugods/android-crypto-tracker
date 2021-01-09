@@ -7,14 +7,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:animateLayoutChanges="true"
-        android:background="@color/colorPrimary">
+        android:background="?colorSurface">
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/default_toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/colorPrimary"
-            app:titleTextColor="@color/colorOnPrimary" />
+            app:titleTextColor="@color/contrast4"
+            android:foregroundTint="@color/contrast4"
+            tools:title="Test Title"/>
 
         <androidx.core.widget.ContentLoadingProgressBar
             android:id="@+id/toolbarProgressBar"

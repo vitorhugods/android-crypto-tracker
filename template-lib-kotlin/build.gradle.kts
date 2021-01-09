@@ -10,12 +10,10 @@ plugins {
 dependencies {
     implementation(kotlin("stdlib-jdk8"))
 
-    implementation(LibSerialization.KOTLINX)
+    implementation(LibSerialization.KOTLINX_JSON)
     implementation(LibSerialization.RETROFIT_KOTLINX)
     implementation(LibHttp.RETROFIT)
     implementation(LibHttp.OKHTTP)
-    implementation(LibCoroutines.CORE)
-    implementation(LibCoroutines.ANDROID)
 
     testImplementation(LibTesting.JUNIT)
 }

@@ -13,9 +13,10 @@ android {
         applicationId = AppCoordinates.APP_ID
         versionCode = AppCoordinates.APP_VERSION_CODE
         versionName = AppCoordinates.APP_VERSION_NAME
-        testInstrumentationRunner = "xyz.schwaab.template.TestAppJUnitRunner"
+        testInstrumentationRunner = "xyz.schwaab.crypto.app.TestAppJUnitRunner"
     }
     compileOptions {
+        isCoreLibraryDesugaringEnabled = true
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
@@ -32,7 +33,7 @@ android {
         dataBinding = true
     }
     lintOptions {
-        isWarningsAsErrors = true
+        isWarningsAsErrors = false
         isAbortOnError = true
     }
     testOptions {
@@ -45,11 +46,12 @@ android {
 
 repositories {
     maven("https://jitpack.io")
-    maven("https://dl.bintray.com/vitorhugods/AvatarView")
 }
 
 dependencies {
     implementation(kotlin("stdlib-jdk8"))
+
+    coreLibraryDesugaring(LibDesugar.CORE_DESUGAR)
 
     implementation(project(Modules.Android.BASE))
     implementation(project(Modules.Android.TICKER))
@@ -60,9 +62,6 @@ dependencies {
 
     implementation(LibArchitecture.LIVE_DATA)
     implementation(LibArchitecture.VIEW_MODEL)
-
-    implementation(LibCoroutines.CORE)
-    implementation(LibCoroutines.ANDROID)
 
     implementation(LibDI.KOIN)
     implementation(LibDI.KOIN_VIEW_MODEL)
@@ -78,7 +77,6 @@ dependencies {
     implementation(LibUI.RECYCLERVIEW)
 
     testImplementation(LibTesting.ANDROID_CORE_TESTING)
-    testImplementation(LibTesting.COROUTINES)
     testImplementation(LibTesting.JUNIT)
     testImplementation(LibTesting.KLUENT)
     testImplementation(LibTesting.ROBOLECTRIC)

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="contrast4">#fff</color>
+    <color name="contrast3">#F3F3F3</color>
+    <color name="contrast2">#A5A5A5</color>
+    <color name="contrast1">#2A2A2A</color>
+    <color name="contrast0">#131212</color>
+
+</resources>
