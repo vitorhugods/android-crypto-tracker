@@ -17,6 +17,7 @@ object Versions {
     const val FLEXBOX_LAYOUT = "2.0.1"
     const val FRAGMENT = "1.2.5"
     const val JUNIT = "4.13"
+    const val MOCKITO = "2.1.0"
     const val KOIN = "2.2.1"
     const val KOTLINX_SERIALIZATION = "1.0.1"
     const val KLUENT = "1.64"
@@ -29,6 +30,7 @@ object Versions {
     const val RECYCLERVIEW = "1.1.0"
     const val RETROFIT = "2.9.0"
     const val RETROFIT_KOTLINX_SERIALIZATION = "0.8.0"
+    const val RETROFIT_RX_JAVA_ADAPTER = "3.0.0"
     const val ROBOLECTRIC = "4.4"
     const val RX_KOTLIN = "3.0.1"
 }
@@ -56,6 +58,7 @@ object LibDI {
 
 object LibHttp {
     const val RETROFIT = "com.squareup.retrofit2:retrofit:${Versions.RETROFIT}"
+    const val RETROFIT_RX_JAVA_ADAPTER = "com.github.akarnokd:rxjava3-retrofit-adapter:${Versions.RETROFIT_RX_JAVA_ADAPTER}"
     const val OKHTTP = "com.squareup.okhttp3:okhttp:${Versions.OKHTTP}"
     const val OKHTTP_LOGGING = "com.squareup.okhttp3:logging-interceptor:${Versions.OKHTTP}"
 }
@@ -69,8 +72,8 @@ object LibReactive {
 }
 
 object LibSerialization {
-    const val KOTLINX =
-        "org.jetbrains.kotlinx:kotlinx-serialization-runtime:${Versions.KOTLINX_SERIALIZATION}"
+    const val KOTLINX_JSON =
+        "org.jetbrains.kotlinx:kotlinx-serialization-json:${Versions.KOTLINX_SERIALIZATION}"
     const val RETROFIT_KOTLINX =
         "com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:${Versions.RETROFIT_KOTLINX_SERIALIZATION}"
 }
@@ -86,6 +89,7 @@ object LibTesting {
     const val ANDROID_CORE_TESTING = "androidx.arch.core:core-testing:${Versions.ANDROID_ARCH}"
     const val JUNIT = "junit:junit:${Versions.JUNIT}"
     const val KLUENT = "org.amshove.kluent:kluent-android:${Versions.KLUENT}"
+    const val MOCKITO = "com.nhaarman.mockitokotlin2:mockito-kotlin:${Versions.MOCKITO}"
     const val LIVE_DATA_TESTING = "com.jraska.livedata:testing-ktx:${Versions.LIVE_DATA_TESTING}"
     const val ROBOLECTRIC = "org.robolectric:robolectric:${Versions.ROBOLECTRIC}"
 }

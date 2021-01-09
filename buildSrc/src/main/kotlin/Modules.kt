@@ -6,5 +6,6 @@ object Modules {
     }
 
     object JVM {
+        const val BLOCKCHAIN_CLIENT = ":blockchain-api-client"
     }
 }

@@ -53,11 +53,12 @@ dependencies {
     implementation(kotlin("stdlib-jdk8"))
 
     implementation(project(Modules.Android.BASE))
+    implementation(project(Modules.JVM.BLOCKCHAIN_CLIENT))
 
     implementation(LibDI.KOIN)
     implementation(LibDI.KOIN_FRAGMENT)
     implementation(LibDI.KOIN_VIEW_MODEL)
-    
+
     implementation(LibArchitecture.LIVE_DATA)
     implementation(LibArchitecture.VIEW_MODEL)
 
