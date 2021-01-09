@@ -44,6 +44,7 @@
         <com.google.android.material.button.MaterialButtonToggleGroup
             android:id="@+id/toggleGroupPeriodSelection"
             android:layout_width="match_parent"
+            app:layout_flexShrink="0"
             android:layout_height="wrap_content"
             app:selectionRequired="true"
             app:singleSelection="true">
